@@ -1,0 +1,107 @@
+.section-two-wrap {
+    background: #FCFCFC;
+    padding-top: 10rem;
+
+    section.two {
+        @include box-shrink();
+        @include both-section-header();
+
+        .cars-desc-box {
+            @include box-flex(column, center, center);
+            margin-top: 6rem;
+            padding-bottom: 1rem;
+
+            .car-desc {
+                @include box-flex(column, center, center);
+                width: 60%;
+                background: rgba(246, 246, 246, .77);
+                margin: 5rem 0;
+                border-radius: 20px;
+
+                .img-box {
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;
+                    border-radius: 20px;
+                }
+
+                @media (min-width: 1600px) {
+                    .img-box {
+                        height: 250px;
+                    }
+                }
+
+                #img1-box {
+                    background-image: url('../images/gtr.jpg');
+                    background-position: bottom;
+                }
+
+                #img2-box {
+                    background-image: url('../images/m3.jpg');
+                }
+
+                #img3-box {
+                    background-image: url('../images/quattroporte.jpg');
+                }
+
+                .text-box {
+                    width: 100%;
+                    padding: 2rem;
+
+                    p {
+                        font-size: 2rem;
+                    }
+
+                    h2 {
+                        text-align: center;
+                        color: $main-color;
+                        font-size: 3rem;
+                        font-weight: 500;
+                    }
+
+                    p:nth-of-type(2) {
+                        font-size: 1.8rem;
+                        color: rgba(119, 114, 114, .77);
+                    }
+
+                    @media (min-width: 1600px) {
+
+                        h2,
+                        p {
+                            text-align: left;
+                        }
+
+                        p {
+                            font-size: 2.1rem;
+                        }
+
+                        p:nth-of-type(2) {
+                            font-size: 1.9rem;
+                        }
+
+                        h2 {
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: 1600px) {
+                .car-desc {
+                    @include box-flex(column, flex-start, center);
+                    width: auto;
+                    width: 27%;
+                }
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .cars-desc-box {
+                @include box-flex(row, space-around, flex-start);
+                margin-top: 10rem;
+            }
+        }
+    }
+}

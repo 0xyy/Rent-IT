@@ -1,0 +1,122 @@
+.header-wrap {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    background: #FCFCFC;
+
+    header {
+        @include box-flex(column, center, center);
+        @include box-shrink();
+
+        .text-box {
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                font-size: 4rem;
+                color: $main-color;
+                font-weight: 500;
+            }
+
+            p {
+                margin-top: 2.8rem;
+                font-size: 2rem;
+                color: $second-color;
+            }
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 2rem;
+                transition: .2s;
+
+                &.explore-btn {
+                    margin-top: 2.8rem;
+                    background: $main-color;
+                    color: #fff;
+                    border-radius: 4rem;
+                    padding: 1rem 3rem;
+                    transition: .5s;
+                }
+
+                &.explore-btn:hover {
+                    background: rgba(119, 114, 114, .6);
+                }
+
+                &.learn-more-btn {
+                    text-transform: uppercase;
+                    color: rgba(119, 114, 114, .6);
+                }
+            }
+
+            .learn-more-btn-box {
+                @include box-flex(row, center, center);
+                cursor: pointer;
+                padding: 2.8rem 0 1rem;
+
+                i {
+                    padding-left: .2rem;
+                    color: rgba(119, 114, 114, .60);
+                    transform: translateX(0);
+                    transition: .2s;
+                }
+            }
+
+            .learn-more-btn-box:hover i {
+                transform: translateX(.3rem);
+            }
+
+            .learn-more-btn-box:hover a {
+                letter-spacing: 0.3px;
+            }
+
+            @media (min-width: 1600px) {
+                .learn-more-btn-box {
+                    @include box-flex(row, flex-start, center);
+                }
+
+                h1 {
+                    font-size: 4.5rem;
+                }
+
+                p,
+                a {
+                    font-size: 2.1rem;
+                }
+
+                a.learn-more-btn {
+                    padding-left: 3.5rem;
+                }
+            }
+        }
+
+        .img-box {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-image: url('../images/cla45s.png');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+        }
+
+        @media (min-width: 1600px) {
+            .text-box {
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .img-box {
+                width: 140%;
+                background-size: 150%;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @media (min-width: 1600px) {
+        header {
+            @include box-flex(row, center, center);
+            margin-top: 6rem;
+        }
+    }
+}

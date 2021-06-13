@@ -1,0 +1,100 @@
+.wave-box {
+    background: #FCFCFC;
+
+    img {
+        height: 100%;
+        width: 100%;
+        transform: translateY(6px);
+    }
+}
+
+.footer-wrap {
+    background: $main-color;
+
+    footer {
+        @include box-shrink();
+        @include box-flex(column, center, flex-start);
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        margin-bottom: 4rem;
+
+        .end-text-box {
+            width: 100%;
+
+            h1 {
+                font-weight: 500;
+                font-size: 4rem;
+            }
+        }
+
+        .footer-one-box {
+            @include box-flex(row, space-between, center);
+            width: 100%;
+            padding-bottom: 4rem;
+
+            .footer-one {
+                margin-top: 5rem;
+
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 500;
+                }
+
+                a {
+                    display: block;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    transition: .5s;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+
+            @media (min-width: 1600px) {
+                .footer-one {
+                    padding-left: 6rem;
+                }
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .footer-one-box {
+                @include box-flex(row, flex-end, center);
+            }
+        }
+    }
+
+    @media (min-width: 1600px) {
+        footer {
+            @include box-flex(row, center, flex-start);
+        }
+    }
+
+    .footer-two-wrap {
+        padding-bottom: 4rem;
+
+        .footer-two-box {
+            @include box-flex(row, space-between, center);
+            @include box-shrink();
+
+            p {
+                display: inline-block;
+                font-size: 2rem;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            @media (min-width: 1600px) {
+                p {
+                    padding-left: 4rem;
+                }
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .footer-two-box {
+                @include box-flex(row, flex-end, center);
+            }
+        }
+    }
+}

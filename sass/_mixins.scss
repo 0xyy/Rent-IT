@@ -1,0 +1,53 @@
+@mixin box-flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin box-shrink() {
+    max-width: 1600px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+@mixin both-section-header() {
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        color: $main-color;
+        font-weight: 500;
+    }
+
+    .bar-wrap {
+        margin-top: 1.5rem;
+        display: inline-block;
+        // background: blue;
+        width: 100%;
+
+        .bar {
+            display: block;
+            margin: 0 auto;
+            width: 5rem;
+            height: .5rem;
+            background: $main-color;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 2rem;
+        color: $second-color;
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 1600px) {
+        h1 {
+            font-size: 4.5rem;
+        }
+
+        p {
+            font-size: 2.1rem;
+        }
+    }
+}

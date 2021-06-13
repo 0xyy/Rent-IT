@@ -1,0 +1,44 @@
+.aside-wrap {
+    background: #FCFCFC;
+
+    aside {
+        @include box-flex(row, space-between, center);
+        @include box-shrink();
+        flex-wrap: wrap;
+        color: rgba(119, 114, 114, .45);
+
+        h3 {
+            font-size: 2rem;
+            flex-basis: 100%;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 5rem;
+            font-weight: 500;
+            padding-right: 20px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        p:hover {
+            color: $second-color;
+        }
+
+        @media (min-width: 1600px) {
+            h3 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 5.8rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .aside-wrap {
+        padding-top: 10rem;
+    }
+}

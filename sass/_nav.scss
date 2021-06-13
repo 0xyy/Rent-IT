@@ -1,0 +1,123 @@
+.nav-wrap {
+    background: #fff;
+
+    nav {
+        @include box-flex(row, null, center);
+        @include box-shrink();
+        height: 9rem;
+
+        .logo {
+            @include box-flex(row, flex-start, center);
+            width: 15rem;
+            height: 5rem;
+            color: $main-color;
+            cursor: pointer;
+
+            i {
+                font-size: 4rem;
+                padding-right: .2rem;
+                margin-bottom: .6rem;
+            }
+
+            p {
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+        }
+
+        .search-box {
+            width: 25rem;
+
+            input {
+                display: inline-block;
+                margin-left: 2rem;
+                width: 22rem;
+                height: 4rem;
+                border-radius: 4rem;
+                border: .1rem solid rgba(119, 114, 114, 0.55);
+                padding: 1.2rem 1rem 1rem;
+                color: $second-color;
+            }
+
+            @media (min-width: 1300px) {
+                input {
+                    margin-left: 8rem;
+                    width: 50rem;
+                }
+            }
+
+            *:focus {
+                outline: none;
+            }
+
+            ::placeholder {
+                opacity: 55%;
+            }
+        }
+
+        @media (min-width: 1300px) {
+            .search-box {
+                width: 60rem;
+            }
+        }
+
+        .menu {
+            @include box-flex(row, flex-end, center);
+            display: flex;
+            flex-grow: 1;
+
+            ul {
+                margin-left: 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 2rem;
+                        color: $main-color;
+                        font-weight: 500;
+                        transition: .5s;
+                    }
+
+                    a:hover {
+                        color: rgba(119, 114, 114, .6);
+                    }
+                }
+            }
+
+            @media (min-width: 1100px) {
+                ul {
+                    width: 80%;
+                }
+            }
+
+            @media (min-width: 1300px) {
+                ul {
+                    width: 100%;
+                }
+            }
+
+            @media (min-width: 1400px) {
+                ul {
+                    width: 90%;
+                }
+            }
+
+            @media (min-width: 1500px) {
+                ul {
+                    width: 70%;
+                }
+            }
+
+            @media (min-width: 1600px) {
+                ul {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
